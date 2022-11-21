@@ -22,10 +22,12 @@
     }
     $answers[$wordLength - 1] = $word[$wordLength - 1];
     $answers1 = implode("", $answers);
+    echo $text . " " . $answers1;
+    echo "<br>";
     if (isset($_GET['guess'])) {
         $input = $_GET["inputAnswer"];
         $count = $_GET['count'] + 1;
-        for ($i=0; $i < $count; $i++) { 
+        for ($i = 0; $i < $count; $i++) {
             $text .= " | ";
         }
         $answers1 = $_GET["answers1"];
